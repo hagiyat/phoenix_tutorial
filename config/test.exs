@@ -12,7 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :rails_tutorial, RailsTutorial.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "railstutorial",
+  password: "railstutorial",
   database: "rails_tutorial_test",
   size: 1 # Use a single connection for transactional tests

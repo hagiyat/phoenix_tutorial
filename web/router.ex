@@ -18,6 +18,10 @@ defmodule RailsTutorial.Router do
     get "/", PageController, :index
     resources "/users", UserController
     resources "/microposts", MicropostController
+
+    get "/static_page/home", StaticPageController, :home
+    get "/static_page/help", StaticPageController, :help
+    get "/static_page/about", StaticPageController, :about
   end
 
   # Other scopes may use custom stacks.
