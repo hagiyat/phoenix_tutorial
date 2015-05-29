@@ -30,6 +30,20 @@ defmodule RailsTutorial.ConnCase do
 
       # The default endpoint for testing
       @endpoint RailsTutorial.Endpoint
+
+      def find_response(conn, selector) do
+        conn.resp_body
+        |> Floki.find(selector)
+        |> List.zip
+      end
+
+      def find_contents(conn, selector) do
+        find_response(conn, selector) |> List.last
+      end
+
+      def find_attributes(conn, selector) do
+        find_response(conn, selector) |> Enum.fetch!(1)
+      end
     end
   end
 
