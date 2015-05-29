@@ -1,13 +1,12 @@
-defmodule RailsTutorial.UserController do
+defmodule RailsTutorial.UserApiController do
   use RailsTutorial.Web, :controller
 
   alias RailsTutorial.User
 
-  plug :scrub_params, "user" when action in [:create, :update]
   plug :action
 
   def index(conn, _params) do
-    render(conn, "index.html")
+    json conn, Repo.all(User)
   end
 
   def new(conn, _params) do

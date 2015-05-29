@@ -25,7 +25,8 @@ defmodule RailsTutorial.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", RailsTutorial do
-  #   pipe_through :api
-  # end
+  scope "/api", RailsTutorial do
+    pipe_through :api
+    get "/users", UserApiController, :index
+  end
 end
