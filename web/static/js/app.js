@@ -5,8 +5,6 @@ import {Socket} from "phoenix"
 // socket.join("topic:subtopic", {}).receive("ok", chan => {
 // })
 
-require('./user.react');
-
 let App = {
 }
 

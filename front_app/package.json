@@ -1,0 +1,52 @@
+{
+  "name": "front_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify -o bundle.js -v -d ."
+  },
+  "author": "",
+  "license": "ISC",
+  "author": "",
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "harmony": true
+        }
+      ],
+      "coffeeify",
+      "react-jade"
+    ]
+  },
+  "dependencies": {
+    "lodash": "*",
+    "react": "*",
+    "react-jade": "^2.3.0"
+  },
+  "devDependencies": {
+    "coffeeify": "*",
+    "browserify": "*",
+    "gulp": "*",
+    "gulp-plumber": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-streamify": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "jquery": "^2.1.4",
+    "lodash": "^3.9.3",
+    "process": "*",
+    "jade": "*",
+    "react": "*",
+    "rx": "*",
+    "react-router": "*",
+    "react-jade": "*",
+    "reactify": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*"
+  }
+}
